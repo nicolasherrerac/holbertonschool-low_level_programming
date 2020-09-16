@@ -1,6 +1,11 @@
+/*
+* 4-puts.c
+*/
 #include <stdio.h>
 /**
-* main 
+* main - print "Programming is like building a multilingual puzzle
+* Description: Learning about the variable puts
+* Return: 0
 */
 int main(void)
 {
