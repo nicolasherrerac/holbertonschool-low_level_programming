@@ -14,7 +14,7 @@ int main(void)
 	{
 		continue;
 	}
-	if (ch == 'e')
+	else if (ch == 'e')
 	{
 		continue;
 	}
