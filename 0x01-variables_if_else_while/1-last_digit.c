@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
-* main - print the last digit and say if is <, >, ==.
-* Description: print the last digit.
+/**
+* main - print the las digit and say if is <, >, ==.
+* Description: print the last digit and say if is <, >, ==.
 * Return: 0.
 */
 int main(void)
