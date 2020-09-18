@@ -19,7 +19,7 @@ int main(void)
 	putchar((ch % 10) + '0');
 	putchar((ch1 % 10) + '0');
 	putchar((ch2 % 10) + '0');
-	if (ch == 7 && ch1 == 8 && ch2 ==9)
+	if (ch == 7 && ch1 == 8 && ch2 == 9)
 		continue;
 		putchar(',');
 		putchar(' ');
