@@ -10,9 +10,9 @@ int main(void)
 	int i;
 
 	printf("Infinite loop incoming :(\n");
-	/* (dont delete it!) */
-	i = 0;
 	
+	i = 0;
+/* (dont delete it!) */
 	while (i < 10)
 	{
 		putchar(i);
