@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* main
+* main - Write a program that prints Holberton, followed by a new line.
 * Descroption: Write a program that prints Holberton, followed by a new line.
 * Return: 0
 */
@@ -16,6 +16,5 @@ int main(void)
 	_putchar('o');
 	_putchar('n');
 	_putchar('\n');
-	 
 	return (0);
 }
