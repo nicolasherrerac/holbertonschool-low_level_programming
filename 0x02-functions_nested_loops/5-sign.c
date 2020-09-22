@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+* print_sign - Write a function that prints the sign of a number.
+* @n: the character to check
+* Return: 0
+*/
 int print_sign(int n)
 {
 	if (n > 0)
