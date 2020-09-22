@@ -10,10 +10,15 @@ void jack_bauer(void)
 	int ch1;
 	int ch2;
 	int ch3;
+	int sum = 10;
 
 	for (ch = 0; ch < 3 ; ch++)
 	{
-		for (ch1 = 0; ch1 < 4; ch1++)
+		if (ch == 2)
+		{
+			sum = 4;
+		}
+		for (ch1 = 0; ch1 < sum; ch1++)
 		{
 			for (ch2 = 0; ch2 < 6; ch2++)
 			{
@@ -29,5 +34,4 @@ void jack_bauer(void)
 			}
 		}
 	}
-	_putchar('\n');
 }
