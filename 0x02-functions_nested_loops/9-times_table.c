@@ -2,7 +2,7 @@
 
 /**
  * times_table - prints a times-table
- * 
+ *
  * Return: 0 void
  */
 
@@ -18,11 +18,11 @@ void times_table(void)
 			con = res / 10;
 			dig = res % 10;
 			if (num > 0)
-			{	
+			{
 				_putchar(' ');
 			}
 			if ((res < 10) && (num > 0))
-			{	
+			{
 				_putchar(' ');
 			}
 			else if (res > 9)
