@@ -34,11 +34,11 @@ void times_table(void)
 				_putchar(con + '0');
 				_putchar(dig + '0');
 			}
-			if (num1 < 9)
+			if (num < 9)
 			{
 				_putchar(',');
 			}
-			else if (num1 == 9)
+			else if (num == 9)
 			{
 				_putchar('\n');
 			}
