@@ -17,27 +17,18 @@ void times_table(void)
 			res = num * num1;
 			con = res / 10;
 			dig = res % 10;
+
 			if (num > 0)
-			{
 				_putchar(' ');
-			}
 			if ((res < 10) && (num > 0))
-			{
 				_putchar(' ');
-			}
 			else if (res > 9)
-			{
 				_putchar(con + '0');
 				_putchar(dig + '0');
-			}
 			if (num < 9)
-			{
 				_putchar(',');
-			}
 			else if (num == 9)
-			{
 				_putchar('\n');
-			}
 		}
 	}
 }
