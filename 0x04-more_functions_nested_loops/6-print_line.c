@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+* print_line - draws a straight line in the terminal.
+* @n: Number of lines
+* Return: 0
+*/
 void print_line(int n)
 {	
 	int ch;
