@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+* print_square - prints a square.
+* @size: Variable square
+* Return: 0
+*/
 void print_square(int size)
 {
 	int ch, ch1;
@@ -14,4 +18,5 @@ void print_square(int size)
 		}
 		_putchar('\n');
 	}
+	return (0);
 }
