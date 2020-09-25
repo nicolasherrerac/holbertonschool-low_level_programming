@@ -10,17 +10,17 @@ int main(void)
 
 	for (ch = 1; ch <= 100; ch++)
 	{
-		if (ch % 3 == 0)
+		if (ch % 3 == 0 && ch % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (ch % 3 == 0)
 		{
 			printf("Fizz");
 		}
 		else if (ch % 5 == 0)
 		{
 			printf("Buzz");
-		}
-		else if (ch % 3 == 0 && ch % 5 == 0)
-		{
-			printf("FizzBuzz");
 		}
 		else
 		{
@@ -29,5 +29,6 @@ int main(void)
 		if (ch < 100)
 			printf(" ");
 	}
+	printf("\n");
 	return (0);
 }
