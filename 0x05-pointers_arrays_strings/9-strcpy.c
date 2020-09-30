@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+* *_strcpy - strcpy.
+* @src: pointer.
+* @dest: pointer
+* Return: 0
+*/
 char *_strcpy(char *dest, char *src)
 {
 	int c;
@@ -8,5 +13,6 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[c] = src[c];
 	}
+	dest[c] = '\0';
 	return (dest);
 }
