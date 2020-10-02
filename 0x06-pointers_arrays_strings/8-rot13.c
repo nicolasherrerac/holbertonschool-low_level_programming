@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+* *root13 -  encodes a string using.
+* @s: pointer
+* Return: 0
+*/
 char *rot13(char *s)
 {
 	int c, i;
