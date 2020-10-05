@@ -8,7 +8,7 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int c, i, a, size;
-	
+
 	for (size = 0; needle[size]; size++)
 		;
 	for (c = 0; haystack[c]; c++)
