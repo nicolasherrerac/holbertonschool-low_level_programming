@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			if (argv[c][p] < '0' || argv[c][p] > '9')
 			{
 				printf("Error\n");
-				return (0);
+				return (1);
 			}
 		}
 		suma += atoi(argv[c]);
