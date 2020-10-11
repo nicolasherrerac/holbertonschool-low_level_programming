@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (c = 0; c < argc; c++)
+	for (c = 1; c < argc; c++)
 	{
-		for (p = 0; argv[c][p]; p++)
+		for (p = 0; argv[c][p] != '\0'; p++)
 		{
-			if (argv[c][p] < '0' || argv[c][p] > '9')
+			if (argv[c][p] < 48 || argv[c][p] > 56)
 			{
 				printf("Error\n");
 				return (1);
@@ -28,6 +28,5 @@ int main(int argc, char *argv[])
 		suma += atoi(argv[c]);
 	}
 	printf("%d\n", suma);
-	(void)argv;
 	return (0);
 }
