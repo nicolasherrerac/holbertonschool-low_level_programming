@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* _strdup - function that print a duplicate array.
-* @str: string "Holberton".
-* Return: c.
-*/
+ * _strdup - function that print a duplicate array.
+ * @str: string "Holberton".
+ * Return: c.
+ */
 char *_strdup(char *str)
 {
 	char *c;
@@ -30,6 +30,7 @@ char *_strdup(char *str)
 	{
 		c[o] = str[o];
 	}
+	c[o] = '\0';
 	return (c);
 
 }
