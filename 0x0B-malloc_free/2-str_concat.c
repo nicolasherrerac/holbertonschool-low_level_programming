@@ -12,9 +12,12 @@ char *str_concat(char *s1, char *s2)
 	char *y;
 	int c, c1, p, p1;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
 		s1 = "";
+	}
+	if (s2 == NULL)
+	{
 		s2 = "";
 	}
 	for (c = 0; s1[c] != '\0'; c++)
