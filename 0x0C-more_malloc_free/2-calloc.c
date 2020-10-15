@@ -1,7 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+* _calloc - function that allocates memory for an array, using malloc.
+* @nmemb: number of characters.
+* @size: size of string.
+* Return: c.
+*/
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *c;
