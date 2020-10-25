@@ -70,22 +70,22 @@ void print_all(const char * const format, ...)
 	va_list list;
 
 	va_start(list, format);
-	i1 =  0;
-	while (format && format[i1])
+	i =  0;
+	while (format && format[i])
 	{
-		i = 0;
-		while (array[i].check != NULL)
+		i1 = 0;
+		while (array[i1].check != NULL)
 		{
-			if (format[i1] == *array[i].check)
+			if (format[i] == *array[i1].check)
 			{
 				printf("%s", coma);
-				array[i].f(list);
+				array[i1].f(list);
 				coma = ", ";
 				break;
 			}
-			i++;
+			i1++;
 		}
-		i1++;
+		i++;
 	}
 	printf("\n");
 	va_end(list);
