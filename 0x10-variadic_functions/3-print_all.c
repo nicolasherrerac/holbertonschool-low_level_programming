@@ -3,52 +3,57 @@
 #include <stdarg.h>
 
 /**
- *
- *
- *
+ * c_char - list of strings.
+ * @list: list of arguments.
+ * Return: Always 0.
  */
 void c_char(va_list list)
 {
 	printf("%c", va_arg(list, int));
 }
 /**
- *
- *
- *
+ * c_int - list of strings.
+ * @list: list of arguments.
+ * Return: Always 0.
  */
 void c_int(va_list list)
 {
 	printf("%i", va_arg(list, int));
 }
 /**
- *
- *
- *
+ * c_float - list of strings.
+ * @list: list of arguments.
+ * Return: Always 0.
  */
 void c_float(va_list list)
 {
 	printf("%f", va_arg(list, double));
 }
 /**
- *
- *
- *
+ * c_string - list of strings.
+ * @list: list of arguments.
+ * Return: Always 0.
  */
 void c_string(va_list list)
 {
-	char *s;
+	char *k;
 
-	s = va_arg(list, char *);
+	k = va_arg(list, char *);
 
-	if (s != NULL)
-	{
-		printf("%s", s);
-	}
-	else
+	if (k == NULL)
 	{
 		printf("(nil)");
 	}
+	else
+	{
+		printf("%s", k);
+	}
 }
+/**
+* print_all - function that prints anything.
+* @format: list of arguments.
+* Return: Always 0.
+*/
 void print_all(const char * const format, ...)
 {
 	check array[] = {
@@ -59,16 +64,16 @@ void print_all(const char * const format, ...)
 		{NULL, NULL},
 	};
 
-	int i = 0;
-	int i1 = 0;
+	int i1, i;
 	char *coma = "";
 
 	va_list list;
 
 	va_start(list, format);
-
-	while (format != NULL && format[i1] != '\0')
+	i1 =  0;
+	while (format && format[i1])
 	{
+		i = 0;
 		while (array[i].check != NULL)
 		{
 			if (format[i1] == *array[i].check)
@@ -85,4 +90,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(list);
 }
-
