@@ -2,12 +2,16 @@
 #define VARIADIC_FUNCTIONS_H
 #include <stdarg.h>
 #include <stdio.h>
-
+/**
+* struct check - struct.
+* @check: name of the struct.
+* @f: pointer to function.
+*/
 typedef struct check
 {
 	char *check;
 	void (*f)(va_list);
-}check;
+} check;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
