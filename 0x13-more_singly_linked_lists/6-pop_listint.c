@@ -6,14 +6,14 @@
  */
 int pop_listint(listint_t **head)
 {
-	int teamf = 0;
+	int a = 0;
 
 	listint_t *nhead;
 
-	teamf = (*head)->n;
+	a = (*head)->n;
 	nhead = (*head)->next;
 	free(*head);
 	*head = nhead;
 
-	return (teamf);
+	return (a);
 }
