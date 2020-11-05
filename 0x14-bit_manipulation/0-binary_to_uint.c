@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * binary_to_uint - converts a binary number to an unsigned int.
+ * @b: pointer to intring. 
+ * Return: num.
+ */
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num;
