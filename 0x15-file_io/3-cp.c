@@ -34,12 +34,10 @@ int main(int argc, char *argv[])
 	} while (read_chars == 1024);
 	if (read_chars < 0)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
-		argv[1]), exit(99);
+		argv[1]), exit(98);
 	if (w_error < 0)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 		argv[2]), exit(99);
-	if (w_error < 0)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (close(file_from) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 	if (close(file_to) == -1)
