@@ -1,8 +1,10 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * countnum - counts the number of words in a string.
- * @s: string to count.
- * Return: int of number of words.
+ * countnum - counts the number of words in a string
+ * @s: string to count
+ * Return: int of number of words
  */
 int countnum(char *s)
 {
@@ -23,16 +25,16 @@ int countnum(char *s)
 }
 
 /**
- * strtow - splits a string into words.
+ * strtow - splits a string into words
  * @str: string to split
- * Return: pointer to an array of strings.
+ * Return: pointer to an array of strings
  */
-char strtow(char *str)
+char **strtow(char *str)
 {
 	int a, b, c, d, n = 0, pos = 0;
-	char len;
+	char **len;
 
-	if (str == NULL * str == '\0')
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	n = countnum(str);
 	if (n == 1)
@@ -44,7 +46,7 @@ char strtow(char *str)
 	a = 0;
 	while (str[a])
 	{
-		if (str[a] != ' ' && (a == 0 str[a - 1] == ' '))
+		if (str[a] != ' ' && (a == 0 || str[a - 1] == ' '))
 		{
 			for (b = 1; str[a + b] != ' ' && str[a + b]; b++)
 				;
