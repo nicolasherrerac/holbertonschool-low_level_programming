@@ -1,11 +1,10 @@
 #include "hash_table.h"
 /**
  * hash_table_set - set value of index hash table.
- * 
  * @ht: Hash table.
  * @key: Key of the element.
  * @value: value associated with the key.
- * Return: 
+ * Return: 1 if it succeeded, 0 otherwise.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -15,46 +14,34 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!key || !ht || !value)
 		return (0);
-
-	val_copy = strdup(value);
-	if (!val_copy)
-		return (0);
-	key_copy = strdup(key);
-	if (!key_copy)
-		return (0);
-
 	index = key_index((const unsigned char *) key, ht->size);
-
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 	{
-		free(key_copy);
-		free(val_copy);
+		free(key);
+		free(value);
 		return (0);
 	}
-	node->key = key_copy;
-	node->value = val_copy;
+	node->key = strdup(key);
+	node->value = strdup(value);
 	node->next = NULL;
 	if ((ht->array)[index] != NULL)
 	{
 		temp_node = (ht->array)[index];
-		while(temp_node)
+		while (temp_node)
 		{
-			if (strcmp(temp_node->key, key_copy) == 0)
+			if (strcmp(temp_node->key, key) == 0)
 			{
-				free(ht->array[index]->value);
-				ht->array[index]->value = val_copy;
-				free(val_copy);
-				fre(key_copy);
+				free(temp_node->value);
+				temp_node->value = value;
 				return (1);
 			}
 			temp_node = temp_node->next;
 		}
-		temp_node = (ht->array)[index];
-		node->next = temp_node;
+		node->next = (ht->array)[index]
 		(ht->array)[index] = node;
 	}
-	else 
+	else
 		(ht->array)[index] = node;
 	return (1);
 }
