@@ -1,4 +1,4 @@
-#include "hash_table.h"
+#include "hash_tables.h"
 /**
  * hash_table_set - set value of index hash table.
  * @ht: Hash table.
@@ -9,8 +9,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index;
-	hash_node_t *node == NULL, *temp_node == NULL;
-	char *val_copy == NULL, *key_copy == NULL;
+	hash_node_t *node = NULL, *temp_node = NULL;
 
 	if (!key || !ht || !value)
 		return (0);
@@ -18,8 +17,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 	{
-		free(key);
-		free(value);
+		free(node->key);
+		free(node->value);
 		return (0);
 	}
 	node->key = strdup(key);
@@ -33,13 +32,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (strcmp(temp_node->key, key) == 0)
 			{
 				free(temp_node->value);
-				temp_node->value = value;
+				temp_node->value = strdup(value);
 				return (1);
 			}
 			temp_node = temp_node->next;
 		}
-		node->next = (ht->array)[index]
-		(ht->array)[index] = node;
+		node->next = (ht->array)[index];
+		ht->array[index] = node;
 	}
 	else
 		(ht->array)[index] = node;
