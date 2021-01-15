@@ -9,9 +9,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int i;
 	char *separator = "";
 
-	putchar('{');
 	if (ht)
 	{
+		putchar('{');
 		for (i = 0; i < ht->size; i++)
 		{
 			node = ht->array[i];
